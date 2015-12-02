@@ -1,6 +1,6 @@
 Package.describe({
   name: 'flynn:base-schema',
-  version: '0.0.4',
+  version: '0.0.5',
   // Brief, one-line summary of the package.
   summary: 'base schema',
   // URL to the Git repository containing the source code for this package.
@@ -11,7 +11,7 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.2.1');
+  api.versionsFrom('METEOR@1.2');
   api.export('BaseSchema');
   api.use('ecmascript');
   api.use('aldeed:simple-schema@1.4.0');
