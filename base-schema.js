@@ -1,4 +1,5 @@
-BaseSchema = new SimpleSchema({
+BaseSchema = new SimpleSchema([CreatorSchema, TimeAtSchema]);
+CreatorSchema = new SimpleSchema({
   userId: {
     type: String, label: "사용자", denyUpdate: true,
     autoValue: function() {
@@ -10,7 +11,9 @@ BaseSchema = new SimpleSchema({
       }
       return this.userId;
     }
-  },
+  }
+});
+TimeAtSchema = new SimpleSchema({
   createdAt: {
     type: Date, label: "생성시간", denyUpdate: true, index: -1,
     autoValue: function() {
